@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khilma XI PPLG 5</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    
+        h1 {
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    
+        p {
+            font-size: 16px;
+        }
+        
+        /* Add styles for the boxes */
+        .box {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Program Kembalian Pembayaran</h1>
+    <div class="container">
+        <script>
+            var harga_barang = parseFloat(prompt("Masukkan harga barang"));
+            var uang_dibayarkan = parseFloat(prompt("Masukkan jumlah uang yang dibayarkan"));
+            var kembalian = uang_dibayarkan - harga_barang;
+            if (kembalian >= 0) {
+                // Add boxes around the values
+                document.write("<div class='box'>Harga barang : Rp" + harga_barang + "</div>");
+                document.write("<div class='box'>Uang yang dibayarkan : Rp" + uang_dibayarkan + "</div>");
+                document.write("<br>");
+                document.write("<div class='box'>Kembalian yang harus diberikan: Rp" + kembalian + "</div>");
+
+            } else {
+                document.write("Maaf, uang yang dibayarkan kurang. Silakan bayar lebih banyak.");
+            }
+        </script>
+    </div>
+</body>
+</html>
